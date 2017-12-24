@@ -1,0 +1,16 @@
+//测试函数如何传入参数
+function  check(a,b,c){
+  var a = a + 20;
+  var b = [2];
+  c.push(3);
+}
+
+var num = 20;
+var arr0 = [0,0,0];
+var arr1 = [1,1,1];
+
+check(num,arr0,arr1);
+
+console.log(num);//20
+console.log(arr0);//[0, 0, 0]
+console.log(arr1);//[1, 1, 1, 3]
