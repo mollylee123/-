@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>简易二维运算</title>
+    <meta charset="utf-8">
+		<script>
+			function mathBi(){
+				//获取输入值，运算符号
+				var input=document.getElementsByName("input");
+
+				var input1 = parseInt(input[0].value);
+
+				var input2 = parseInt(input[1].value);
+
+				var select = document.getElementById("select").value;
+
+				var output = document.getElementById("output");
+				//满足条件，执行对应代码 
+				switch(select){
+					case "+":
+						//通过修改对象属性和属性值，实现输入框的文本输出
+						//方法1：element.value = "";
+						//方法2：elment.setAttribute(attributename,attributevalue);
+						output.setAttribute("value",input1 + input2);
+						break;
+					case "-":
+						output.setAttribute("value",input1 - input2);
+						break;
+					case "*":
+						output.setAttribute("value",input1 * input2);
+						break;
+					case "/":
+						output.setAttribute("value",input1 / input2);
+						break;
+					}
+        }
+		</script>
+	</head>
+	<body>
+	  <form>
+			<input name="input">
+			<select id="select">
+				<option>+</option>
+				<option>-</option>
+				<option>*</option>
+				<option>/</option>
+			</select>
+			<input name="input">
+			<button onclick="mathBi()">=</button>
+			<input id="output">
+		</form>
+	</body>
+</html>
