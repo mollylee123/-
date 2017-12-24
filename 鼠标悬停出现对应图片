@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>鼠标悬停出现对应图片</title>
+    <meta charset="utf-8">
+    <style>
+        a{
+          color:inherit;
+          text-decoration:none;
+          font-family:Microsoft YaHei;
+          font-size:bold;
+
+          background:;
+
+        }
+        li{
+          color:grey;
+          line-height:30px;
+          width:150px;
+          background:pink;
+          list-style:none;
+          text-align:center;
+          border:1px dashed grey;
+          margin:0 auto;
+        }
+        img{
+          margin:;
+        }
+        div{
+          background:#CDB79E;
+        }
+     </style>
+  </head>
+  <body>
+      <ul id="imgs">
+        <li><a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115762010&di=2e6dc38c2eb018110eb7806b394f70b6&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fac345982b2b7d0a23ffb0557c2ef76094a369acd.jpg">上海美人</a>       </li>
+        <li><a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115839311&di=a62b379e98b524a3924e72cc248a1c0f&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fdc54564e9258d109da7faf78d858ccbf6d814d5f.jpg">竹林曼曼</a>       </li>
+        <li><a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115994109&di=6862b7ad3174c184672c5c0bf1951e18&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F2934349b033b5bb5d0f921343fd3d539b700bcc9.jpg">青春回响</a>       </li>
+        <li><a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115944670&di=3bad5554b8330ba20edd0dee2f64dd15&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F023b5bb5c9ea15ce2a78e6c3bf003af33b87b261.jpg">成人礼</a>         </li>
+      </ul>
+      <div style="text-align:center; width: 100%; ">
+        <img id="placeholder" alt="mygallery" width="500px" height="400px"src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514117902194&di=df86c50bb2bc071086d4a0e037e51f1f&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fu%2F00%2F00%2F13%2F55%2F55edb822a08df.jpg">
+      </div>
+      <script>
+        var lis=document.getElementsByTagName("li");
+        var img =document.getElementById("placeholder");
+        var as = document.getElementsByTagName("a");
+
+        for(var i=0;i<lis.length;i++){
+          //鼠标浮动事件
+          lis[i].index = i;//这步不能省略，具体原理还不知？以为为何下面函数块里不能使用lis[i]等；
+          //object.index = i ;自定义属性，方便后续使用
+          lis[i].onmouseover=function(){ 
+            var src=as[this.index].getAttribute("href");
+            this.style.cssText = "background:white;"
+            img.setAttribute("src",src);
+          }
+
+          //鼠标移开事件
+            lis[i].onmouseout=function(){
+
+            this.setAttribute("style","background:pink");
+            this.style.color="grey";
+          }  
+        }
+       </script>
+  </body>
+</html>
