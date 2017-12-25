@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>ife-js-2</title>
+				<meta charset="utf-8">
+				<style>
+						#aqi-list li{
+							background:white;
+							width:150px;  
+							list-style:none;
+							line-height:30px;
+							border:1px dashed grey;
+							text-align:center;
+							margin-bottom:-1px;
+
+						}
+							.listyle{
+							background:white;
+							width:150px;  
+							list-style:none;
+							line-height:30px;
+							border:1px dashed grey;
+							text-align:center;
+							margin-bottom:-1px;
+						}
+				</style>
+		</head>
+		</body>
+				<!--要求-->
+				<h4>参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按照一定的格式要求显示在网页上</h4>
+				<hr>
+				<!---->
+				<h3>污染城市列表</h3>
+					<ul id="aqi-list">
+						<a class="listyle"></a>
+					</ul>
+				</script>  
+						 var aqiData = [
+							["北京", 90],
+							["上海", 50],
+							["福州", 10],  
+							["广州", 50],
+							["成都", 90],
+							["西安", 100]
+						];
+
+						//第一步：数组排序
+						function sortWay(a,b){
+							var a = a[1];
+							var b = b[1];
+							return a-b;
+						}
+						aqiData.sort(sortWay);
+						//第二步：删除aqiDate>60的数据
+						//方法1：for循环
+						 /*
+						 for(var i=0;i<aqiData.length;i++){
+								if(aqiData[i][1]>60){
+									aqiData.splice(i,1);
+									i--;
+								}
+							}
+						console.log(aqiData);
+						*/
+
+						//方法2：forEach
+						/*aqiData.forEach(function(aqi){
+							if(aqi[1]>60) {
+								aqi[1].aplice;
+							 }
+						});
+						console.log();*/
+						//方法3：filter
+						function isenoughsmall(value){
+							return value[1]<=60;
+						}
+						var newaqi = aqiData.filter(isenoughsmall);
+						//console.log(newaqi);
+						//第三步：拆分数组，组合输出语句
+						//第四步：输出对应数据到页面指定位置
+						for(var j=0;j<newaqi.length;j++){
+							//拆分组合输出的li语句
+							var aqitext = "第"+ parseInt(j+1) + "名：" + newaqi[j][0] + "," + newaqi[j][1];
+							//获取父元素节点
+							var ul = document.getElementById("aqi-list");
+							var li = document.createElement("li");
+							var text = document.createTextNode(aqitext);
+							//给新创建的li标签添加文本节点
+							li.appendChild(text);
+							//给指定的父元素添加新创建的li标签，实现网页出现数据
+							ul.appendChild(li);
+							
+							
+							//diy练习
+							//鼠标事件，悬移ok；
+							li.onmouseover = function(){
+								this.setAttribute("style","background:black;color:green;border:1px solid white");
+							}
+							//鼠标事件，通过更改li类名来达到移开样式恢复的效果失败！！！！！原因未知？
+							li.onmouseout = function(){
+								//this.setAttribute("class","listyle");更改属性也不行
+								//this.className = "listyle";不成功
+							 // document.li.classList.add("listyle");依然不行
+								//this.setAttribute("style","background:white;color:black;border:1px dashed grey");这种可以但不是我想要的方法
+							}
+						}
+				</script>
+		</body>
+</html>
