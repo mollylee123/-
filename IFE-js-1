@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--要求-->
+		<h4> 本任务完成的功能为：用户可以在输入框中输入任何内容，点击“确认填写”按钮后，用户输入的内容会显示在“您输入的值是”文字的右边</h4>
+		<hr>
+		<br>
+		<!--输入框-->
+		<label for="inputvalue">
+		  输入<input id="inputvalue" type="" placeholder="" maxlength="" value="" min="" max="" >
+		</label>
+		<!--输出框-->
+		您输入的值是：<input id="outputvalue" >
+		<!--绑定按钮的点击事件-->
+		<button onclick="output()">确认填写</button>
+
+		<script type="text/javascript">
+			//获取输入框和输出框元素节点，输入框value值赋值给输出框
+			function output(){
+			  var inputvalue = document.getElementById("inputvalue");
+			  var outputvalue = document.getElementById("outputvalue");
+			  outputvalue.value = inputvalue.value;
+			  inputvalue.value = "";
+			}
+		</script>
+	</body>
+</html>
