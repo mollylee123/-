@@ -1,0 +1,182 @@
+<html><head>
+    <title>ife-css-3 三栏式布局</title>
+    <meta charset="utf-8">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            }
+        body{
+        padding:20px;
+        }
+        /*float-layout
+        .viewpage{
+            background:#eee;
+            padding:20px;
+            border:1px solid #999;
+            overflow:hidden;
+            text-align:justify;
+        }
+        .left-title{
+            float:left;
+            background:green;
+            width:200px;
+            margin-right:20px;
+            padding:20px;
+            }
+        .main{
+            overflow:hidden;
+            background:pink;
+            padding:20px
+            }
+        .aside{
+            float:right;
+            background:blue;
+            width:120px;
+            margin-left:20px;
+            padding:20px;
+            }
+        */
+        /*position-layout
+        .viewpage{
+            background:#eee;
+            padding:20px;
+            border:1px solid #999;
+            text-align:justify;
+            position:absolute;
+            width:1100px;
+            height:500px;
+        }
+        .left-title{
+            position:absolute;
+            background:green;
+            padding:20px;
+            width:200px;
+            left:20px;
+        }
+        .main{
+            position:absolute;
+            background:pink;
+            padding:20px;
+            left:280px;
+            right:200px;
+        }
+        .aside{
+            position:absolute;
+            background:blue;
+            padding:20px;
+            width:120px;
+            right:20px;
+        }
+        */
+        /*flex-layout
+        .viewpage{
+            background:#eee;
+            padding:20px;
+            border:1px solid #999;
+            text-align:justify;
+            display:flex; 
+            flex:1;  
+            align-items:; 
+        }
+        .left-title{
+            background:green;
+            width:200px;
+            padding:20px;
+            
+        }
+        .main{
+            background:pink;
+            padding:20px;
+            margin-left:20px;
+            margin-right:20px;
+        }
+        .aside{
+            background:blue;
+            width:120px;
+            padding:20px;
+            
+
+        }*/
+        /*table-layout
+        .viewpage{
+            background:#eee;
+            padding:20px;
+            border:1px solid #999;
+            text-align:justify;
+            display:table;
+        }
+        .left-title{
+            background:green;
+            display:table-cell;
+            width:200px;
+            padding:20px;
+        }
+        .main{
+            background:pink;
+            display:table-cell;
+            padding:20px;
+            border-left:20px solid white;
+            border-right:20px solid white;
+        }
+        .aside{
+            background:blue;
+            display:table-cell;
+            width:120px;
+            padding:20px;
+        }*/
+        /*grid-layout*/
+        .viewpage{
+            background:#eee;
+            padding:20px;
+            border:1px solid #999;
+            text-align:justify;
+            display:grid;
+            grid-template-columns:200px 20px auto  20px 120px;
+            grid-template-rows:auto;
+        }
+        .left-title{
+            background:green;
+            padding:20px;
+        }
+        .main{
+            background:pink;
+            padding:20px;
+            
+        }
+        .aside{
+            background:blue;
+            padding:20px;
+        }
+    </style>
+  </head>
+  <body>
+    <article class="viewpage">
+    
+      <section  class="left-title">
+        
+        <div>左侧<br>
+          <p>张爱玲（1920-1995），中国女作家。祖籍河北丰润，生于上海。1943年开始发表作品，代表作有中篇小说《倾城之恋》、《金锁记》、短篇小说《红玫瑰与白玫瑰》和散文《烬余录》等。1952年离开上海，1955年到美国，创作英文小说多部。1969年以后主要从事古典小说的研究，著有红学论集《红楼梦魇》。已出版作品有中短篇小说集《传奇》、散文集《流言》、散文小说合集《张看》以及长篇小说《十八春》、《赤地之恋》等。</p>
+        </div>
+      </section>
+      <section class="margin"></section>
+      <main class="main">
+        <div >中间<br>
+          <p>这是真的。 　　这个村庄的小康之家的女孩子，生的美，有许多人来做媒，但都没有说成。那你她不过十五六岁吧，是春天的晚上，她立在门后，手扶着桃树。她记得她穿着一件月白色的衫子，对门住的年轻人，同她见过面，可是从来没有打过招呼的。他走了过来，离的不远，站定了，轻轻说了一声：“噢，你也在这里吗。”她没有说什么，他也没有再说什么，站了一会，各自走开了。 　　就这样就完了。 　　后来这女人被亲眷拐了，卖到他乡外县去作妾，又几次三番被转卖，经过无数的惊险的风波，老了的时候她还记得从前的那一回事，常常说起，在那春天的晚上，在后门口的桃树下，那年轻人。 　　于千万人之中遇到你所要遇到的人，于千万年之中，时间的无涯的荒野中，没有早一步，也没有晚一步，刚巧赶上了，那也没有别的话好说，唯有轻轻的问一声：“噢，你也在这里吗?”</p>
+        </div>
+      </main>
+      <section class="margin"></section>
+      
+      
+      
+      <aside class="aside">
+        <div >右侧
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          hh
+        </div>
+      </aside>
+    
+      
+    </article>
+  </body>
+</html>
