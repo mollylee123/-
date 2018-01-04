@@ -1,0 +1,115 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>ife-css-4 定位与居中</title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            .main{
+                width:400px;
+                height:200px;
+                background:#ccc;
+                overflow:hidden;
+            }
+            
+            /*浮动方法进行裁剪出四分之一圆（缺点：灰色区域高度变化时，黄色扇形无法跟随变化*/
+            .cir{
+                background:#fc0;
+                width:100px;
+                height:100px;
+                border-radius:50px;
+                float:left;
+            }
+            .empty-place{
+                clear:both;
+                float:left;
+                width:400px;
+                height:100px;
+            }
+
+            .cir1{
+                margin-top:-50px;
+                margin-left:-50px;
+            }
+            .cir2{
+                float:right;
+                margin-right:-50px;
+                margin-bottom:-100px;
+            }
+            /*
+            table-way
+            尝试表格方法进行垂直水平居中，或许不行。表格具有的特性，子元素的宽度和高度跟随父元素table变化，
+            除非是对文字进行垂直水平居中（text-align配合vertical-align）
+            body{
+                display:table;
+            }
+            .rect{
+                display:table-cell;
+                
+            }
+            */
+
+            /*
+            position-way
+            html,body{
+                height:100%;
+            }
+            .rect{
+                margin:0 auto;    
+                position:relative; 
+                top:50%;
+                overflow:hidden;
+                margin-top:-100px;         
+            }
+            本案例取用相对定位，由于其特性是保留普通流中原位置不变，因此通过margin设置的水平居中得以保留；
+            当取用绝对定位时，其具有脱离普通流，块级元素左边距和右边距与父元素对齐，不再水平居中，可以通过设置left：50%控制水平居中；
+            定位居中关键点在于：居中元素的所有父元素需要设置高度，不然将失效，比如此案例中HTML和body均设置100%宽度，
+            拓展：height：100%；与height：inherit；的异同？当绝对定位未设置四个方向值时，父元素的宽高是，和浮动元素有什么区别？
+            */
+
+            /*
+            flex-way
+            此方法，注意父元素高度如果需要设置100%时，其所有父元素均需要height设置为100%；也可以采取height：inherit；
+            html,body{
+                height:100%
+            }
+            .rect{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100%
+            }
+            */
+            /*grid-way*/
+            .rect{
+                display:grid;
+                grid-template-columns:100%;
+                grid-template-rows:100%;
+            }
+            /*inline-way
+            
+            暂时成功水平居中，垂直居中通过vertical未成功
+            .main{
+                display:inline-block;
+            }
+            .rect{
+                text-align:center;
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <section class="rect">
+            <div class="main">
+                <div class="cir cir1"></div>
+                <div class="empty-place"></div>
+                <div class="cir cir2"></div>
+                <div class="rect0"></div>
+            </div>
+        </section>
+        
+    </body>
+</html>
