@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <title>百度前端课程任务1|小薇课程</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+         <nav class="top-nav">
+             <style>
+                 *{
+                     padding:0;
+                     margin:0;
+                 }
+                 .overflow{
+                     overflow:hidden;
+                 }
+                 .top-nav{
+                     width:100%;
+                     background:black;
+                     display:flex;
+                     justify-content:space-between;
+                     align-items:center;
+                     height:60px;
+                     padding:5px;
+                 }
+                 .top-nav img{
+                    line-height:60px;
+                    margin-left:30px;   
+                 }
+                 .top-nav li{
+                     float:left;
+                     color:red;
+                     margin-left:20px;    
+                 }
+                 .top-nav ul{
+                     margin-right:20px;
+                 }
+                 
+                
+                 .top-nav a{
+                     color:white;
+                     text-decoration:none;
+                     
+                 }
+                 .top-nav a:hover{
+                     color:bisque;
+                 }
+                 .top-nav a:visited{
+                     color:pink;
+                 }
+            </style>
+
+            <img alt="baidu-logo" src="https://www.baidu.com/img/baidu_jgylogo3.gif" width="100px" height="50px;">
+            <ul class="overflow">
+                <li><a href="www.baidu.com" target="_blank">导航链接一</a></li>
+                <li><a href="www.baidu.com" target="_blank">导航链接二</a></li>
+                <li><a href="www.baidu.com" target="_blank">导航链接三</a></li>
+                <li><a href="www.baidu.com" target="_blank">导航链接四</a></li>
+            </ul>
+        </nav>
+        <section class="content">
+            <style>
+                .content{
+                    padding:20px;
+                    background:grey;
+                }
+
+            </style>
+            <aside>
+                <style>
+                    aside{
+                        float:right;
+                        background:white;
+                        width:300px;
+                        margin-left:20px;
+                        padding:20px;
+                        border:1px solid grey;
+                    }
+                    aside h2{
+                        border-left:2px solid grey;
+                        line-height:40px;
+                        font-size:16px;
+                        text-indent:1em;
+                    }
+                    form span{
+                        display:inline-block;
+                        width:35%;
+                        text-align:right;
+                        margin-right:20px;
+                    }
+                    form input,form select{
+                        display:inline-block;
+                        text-align:left;
+                    }
+                    form p{
+                        height:30px;
+                        font-size:14px;
+                    }
+                    .hideborder{
+                        border:hidden;
+                        color:grey;
+                        margin-bottom:20px;
+                    }
+                    form div input{
+                        display:inline-block;
+                        width:100%;
+                        height:35px;
+                        background:blue;
+                        text-align:center;
+                        color:white;
+                        border:blue;
+                        border-radius:10px;
+                        margin-top:10px;
+                    }
+                    form div{
+                        font-size:15px;
+                    }
+                </style>
+                <h2>这是一个侧栏标题,侧栏注册窗口标题</h2>
+                <form action="" method="get">
+                    <p>
+                        <span>请输入邮箱地址</span><input type="text" value="enter ur email">
+                    </p>
+                    <span></span>
+                    <input type="text" value="邮箱地址请按要求输入" class="hideborder">
+                    <p>
+                        <span>请输入密码</span><input type="password" > 
+                    </p>
+                    <p>
+                        <span>请重复输入密码</span><input type="password" >
+                    </p>
+                    <span></span>
+                    <input type="text"  class="hideborder" value="密码请为6-16位英文数字">
+                    
+                    <p><span>性别</span><input name="sex" type="radio" value="female">female<input name="sex" type="radio" value="male">male</p>
+                    <p><span>爱好</span><input type="checkbox" name="bike">自行车 <input type="checkbox" name="basketball">篮球<input type="checkbox" name="swimming">游泳</p>
+                    <p>
+                        <span>城市</span>
+                        <select>
+                            <option value="beijing">beijing</option>
+                            <option value="shanghai">shanghai</option>
+                            <option value="guangzhou">guangzhou</option>
+                            <option value="shenzheng">shenzheng</option>
+                        </select>
+                    </p>
+                    
+                    <div height="50px" >
+                        <span >个人介绍</span>
+                        <textarea cols="20" rows="3" >enter what u want to write</textarea>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="确认提交">
+                    </div>
+                    
+
+                </form>
+            </aside>  
+
+
+
+            <main>
+                <style>
+                    main{
+                        overflow:hidden;
+                        
+                        
+                    }
+                    main article{
+                        border:1px solid grey;
+                        padding:20px;
+                        margin-bottom:20px;
+                        background:white;
+                        
+                    }
+                    h3{
+                        color:grey;
+                        margin-top:10px;
+                        margin-bottom:10px;
+                    }
+                    h3 + p{
+                        color:grey;
+                        font-size:12px;
+                    }
+                    
+                </style>
+
+                <article class="article1">
+                        <h2>文章一级标题</h2>
+                        <h3>文章二级标题</h3>
+                        <p>文章作者 文章发表时间</p>
+                        <p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落</p>
+                        <p>换行了</p>
+                        <img src="http://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=fatezero&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=-1&cs=417856625,1504053837&os=2118479106,2025563229&simid=4246648893,716633391&pn=8&rn=1&di=38507733661&ln=1986&fr=&fmq=1500951481017_R&fm=detailrs5&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&oriquery=fate&objurl=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201205%2F25%2F20120525203925_fRUSN.jpeg&rpstart=0&rpnum=0&adpicid=0&ctd=1500951564843^3_1899X878%1#pn=8&spn=0&di=38507733661&adpicid=0&lpn=0&cs=417856625%2C1504053837&pi=0&simid=4246648893%2C716633391&objurl=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201205%2F25%2F20120525203925_fRUSN.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B17tpwg2_z%26e3Bv54AzdH3Frj5rsjAzdH3F4ks52AzdH3Fdlnmacl0AzdH3F1jpwtsAzdH3F%3Fr6j%3D989dnbdb&W=1100&H=800&S=&TP=jpeg" alt="fatepic">
+                        <p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，换行了</p>
+                        <p>这是一个很长的段落，这是一个很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到百度前端官网http://ife.baidu.com</a>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，<b>这里有个粗体字</b>，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落。<a href="http://ife.baidu.com" target="_blank">这里有一个新的链接点击后打开新窗口链接。</a></p>
+                </article>
+                <article class="article2">
+                    <style>
+                        .pic-line div{
+                            border:1px solid grey;
+                            padding:20px;
+                            text-align:center;
+                            margin-right:20px;
+                            margin-bottom:20px;
+                        }
+                        /*图片行*/
+                        /*.pic-line div{
+                            float:left;                        
+                        }*/
+                        .pic-line{
+                            display:flex;
+                            flex-wrap:wrap;
+                        }
+                        .article2 li{
+                        list-style:none inside;
+                    }
+
+                    </style>
+                    <h2>另一篇文章一级标题</h2>
+                    <h3>另一篇文章二级标题</h3>
+                    <p>文章作者 文章发表时间</p>
+                    <p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落</p>
+                    <p>换行了</p>
+                    <p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，换行了</p>
+                    <p>这是一个很长的段落，这是一个很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到百度前端官网http://ife.baidu.com</a>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，<b>这里有个粗体字</b>，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落。<a>
+                    <ul>
+                        <li>列表项目一</li>
+                        <li>列表项目二</li>
+                        <li>列表项目三</li>
+                    </ul>
+                    <p>角色图片</p>
+                    <section class="pic-line">
+                        <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>
+                                        <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>
+                                        <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>
+                                        <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>
+                                        <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>                <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>
+                                        <div>
+                        卫宫切嗣
+                        <br>
+                            <img width="250px" height="200px" src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f907fa33858ba61ecbe3c07d205dfc6f/86d6277f9e2f0708600ad6f9ee24b899a901f238.jpg" alt="卫宫切嗣">
+                        </div>
+                        <div>
+                        Saber阿尔托利亚·潘德拉贡
+                        <br>
+                            <img width="250px" height="200px" src="http://c.hiphotos.baidu.com/exp/w=500/sign=dc7a9228037b02080cc93fe152d8f25f/f7246b600c338744598495f1580fd9f9d62aa0fe.jpg" alt="Saber阿尔托利亚·潘德拉贡">
+                        </div>
+                    </section>
+                </article>
+                <article class="form">
+                    <style>
+                        .form{
+                            clear:both;
+                            margin-bottom:0;
+
+                        }
+                        .form li{
+                            list-style-position:inside;
+                            margin-top:5px;
+                        }
+                        .form ol{
+                            margin:10px 10px;
+                        }
+                        .table{
+                             width:100%;
+                             border-collapse:collapse;
+                             text-align:left;
+                             table-layout:fixed;
+                             font-size:15px;
+                        }
+                        .table th{
+                            background-color:black;
+                            color:white;
+                        }
+                        .table .tfooter{
+                            background-color:grey;
+                        }
+                        .table tr{
+                            height:25px;
+                        }
+                    </style>
+                    <h2>最后一篇文章一级标题</h2>
+                    <h3>文章二级标题</h3>
+                    <p>文章作者 文章发表时间</p>
+                    <ol>
+                        <li>排名一</li>
+                        <li>排名二</li>
+                        <li>排名三</li>
+                    </ol>
+                    <p>下面是一个表格，给border=1px，好让大家看出来这是一个表格。</p><br>
+                    <table border="1"  class="table"><!--为什么用style设置样式，边框只显示最外侧，里面均没有显示-->
+                        <tbody>
+                            <tr><th>表头</th><th>表头</th><th>表头</th></tr>
+                            <tr><td>内容啊啊啊啊</td><td>内容</td><td><a href="">操作</a></td></tr>
+                            <tr><td>内容</td><td>内容</td><td><a href="">操作</a></td></tr>
+                            <tr><td>内容</td><td>内容</td><td><a href="">操作</a></td></tr>
+                            <tr><td>内容</td><td>内容</td><td><a href="">操作</a></td></tr>
+                            <tr class="tfooter"><td>总计</td><td  colspan="2">1000</td></tr>
+                        </tbody>
+                    </table>
+
+                </article>
+            </main>
+        </section>
+        <footer class="footer">
+            <style>
+                html,body{
+                    width:100%;
+                }
+                .footer{
+                    height:60px;
+                    background:black;
+                    width:100%
+                }
+                .footer p{
+                    text-align:center;
+                    line-height:60px;
+                    color:white;
+                }
+            </style>
+            <p>版权所有</p>
+        </footer>
+    </body>
+</html> 
